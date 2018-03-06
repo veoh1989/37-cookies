@@ -18,7 +18,7 @@
 ##### frontend/
 * **README.md** -- with a documentation about your lab
 * **.babelrc** -- with all dependencies and dev-dependencies
-* **.eslintrc** -- with the class .eslintrc file
+* **.eslintrc.json** -- with the class .eslintrc.json file
 * **.gitignore** -- with a robust gitignore
 * **.eslintignore** -- with the class .eslintignore
 * **yarn.lock** -- with the yarn lockfile
