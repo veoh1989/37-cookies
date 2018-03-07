@@ -1,5 +1,6 @@
 import React from 'react';
 import Content from './content';
+import './main.scss';
 import Landing from './landing';
 import {Provider} from 'react-redux';
 import createStore from '../lib/app-create-store';

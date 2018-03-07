@@ -15,6 +15,7 @@ class Landing extends React.Component {
     return (
       <div className="landing-container">
         <AuthForm
+          history={this.props.history}
           auth={params.auth}
           onComplete={onComplete}/>
       </div>
