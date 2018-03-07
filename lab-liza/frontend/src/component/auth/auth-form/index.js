@@ -1,9 +1,9 @@
-import React from 'react'
-import {renderIf} from '../../../lib/utils'
+import React from 'react';
+import {renderIf} from '../../../lib/utils';
 
 export default class AuthForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state ={
       username: '',
       email: '',
@@ -12,28 +12,28 @@ export default class AuthForm extends React.Component {
       emailError: null,
       passwordError: null,
       error: null,
-    }
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    let {name, value} = e.target
+    let {name, value} = e.target;
     this.setState({
       [name]: value.trim(),
       usernameError: name === 'username' && !value.trim() ? 'Username required' : null,
       emailError: name === 'email' && !value.trim() ? 'Email required' : null,
       passwordError: name === 'password' && !value.trim() ? 'Password required' : null,
-    })
+    });
   }
 
   handleSubmit(e) {
-    e.preventDefault()
-    let {username, email, password} = this.state
+    e.preventDefault();
+    let {username, email, password} = this.state;
     this.props.onComplete({ username, email, password })
-    .then(() => this.setState({ username: '', email: '', password: '' }))
-    .catch(error => this.setState({error}))
+      .then(() => this.setState({ username: '', email: '', password: '' }))
+      .catch(error => this.setState({error}));
   }
 
   render() {
@@ -70,6 +70,6 @@ export default class AuthForm extends React.Component {
 
         <button type="submit">{this.props.auth}</button>
       </form>
-    )
+    );
   }
 }
