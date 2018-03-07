@@ -23,11 +23,11 @@ export default new Router()
     morgan('dev'),
     cookieParser(),
     bindResponseMethods,
-    // ROUTERS 
+    // ROUTERS
     routerAuth,
     routerPhoto,
     routerProfile,
     // ERROR HANDLERS
-    fourOhFour, 
+    fourOhFour,
     errorHandler,
   ]);
