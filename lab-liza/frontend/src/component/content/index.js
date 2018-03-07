@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default class Content extends React.Component {
   render() {
@@ -7,6 +7,6 @@ export default class Content extends React.Component {
         <h1>Hello, I am authorized to see this!</h1>
         <p>{this.props.token}</p>
       </div>
-    )
+    );
   }
 }
