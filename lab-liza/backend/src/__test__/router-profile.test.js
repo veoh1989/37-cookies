@@ -69,22 +69,6 @@ describe('router-profile', () => {
       });
     };
 
-    test('should return 100 profiles', () => {
-      return mockManyProfiles(175)
-        .then((profileData) => {
-          return request.get(`${API_URL}/profiles`)
-            .then(res => {
-              expect(res.status).toEqual(200);
-              expect(res.body.count).toEqual(175);
-              expect(res.body.data.length).toEqual(100);
-              expect(res.body.prev).toEqual(null);
-              expect(res.body.next).toEqual(`${API_URL}/profiles?page=2`);
-              expect(res.body.last).toEqual(`${API_URL}/profiles?page=2`);
-              compareMockWithResponse(profileData)(res.body.data);
-            });
-        });
-    });
-
     test('?page=2 should return 50 profiles', () => {
       return mockManyProfiles(150)
         .then((profileData) => {
